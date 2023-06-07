@@ -1,10 +1,7 @@
 import React from "react";
 import DescriptionCard from "../DescriptionCard/Card";
-import Bell from "../../assets/notifications/Bell.png";
-// import { notificationCard } from "../../assets/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
@@ -14,7 +11,6 @@ import useWindowWidth from "../../customHooks/useWindowWidth";
 
 function Row({ isReverse, data }) {
   const width = useWindowWidth();
-  console.log("this is width", width);
   return (
     <div className={`row ${isReverse && width > 680 ? "reverse" : ""}`}>
       <DescriptionCard
@@ -26,7 +22,7 @@ function Row({ isReverse, data }) {
       <div className="notification-carousel">
         {data.isCarousel ? (
           <Swiper
-            spaceBetween={0}
+            spaceBetween={14}
             slidesPerView={width > 680 ? 2 : 1}
             modules={[Autoplay]}
             autoplay={{

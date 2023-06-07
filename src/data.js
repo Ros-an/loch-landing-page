@@ -1,9 +1,9 @@
-import Card1 from "./notifications/Card1.png";
-import Card2 from "./notifications/Card2.png";
-import Card3 from "./notifications/Card3.png";
-import Cohorts from "./Cohorts_1.svg";
-import Bell from "./notifications/Bell.png";
-import Eye from "./notifications/Eye.png"
+import Card2 from "./assets/notifications/Card2.png";
+import Card1 from "./assets/notifications/Card1.png";
+import Card3 from "./assets/notifications/Card3.png";
+import Cohorts from "./assets/Cohorts_1.png";
+import Bell from "./assets/notifications/Bell.png";
+import Eye from "./assets/notifications/Eye.png"
 
 export const testimonials  = [
     {

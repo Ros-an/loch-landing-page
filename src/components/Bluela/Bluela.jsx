@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.scss";
 import Row from "../Row/Row";
-import { features } from "../../assets/data";
+import { features } from "../../data";
 import Testimonial from "../Testimonial/Testimonial";
 
 function Bluela() {
