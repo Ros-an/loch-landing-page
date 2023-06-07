@@ -1,0 +1,42 @@
+/* .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+} */
+.main {
+  background-color: #19191A;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+
+    & .bluela {
+      width: 65%;
+    }
+
+    & .signup {
+      width: 35%;
+    }
+  }
+}
+
+.carousel-root {
+
+  & .carousel-status,
+  .dot {
+    display: none;
+  }
+
+  & .thumbs-wrapper,
+  .control-arrow {
+    display: none;
+  }
+}
+
+.bluela,
+.signup {
+  flex: 0.5;
+  width: 100%;
+}
