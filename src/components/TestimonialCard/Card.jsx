@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles.scss";
-import useWindowWidth from "../../customHooks/useWindowWidth";
 
 function TestimonialCard({ name, designation, reviewMsg }) {
   return (
