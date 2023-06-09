@@ -9,6 +9,7 @@ function SignUp() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+
     window.location.href = "https://app.loch.one/welcome";
     setEmail("");
   };
@@ -21,9 +22,10 @@ function SignUp() {
             type="email"
             value={email}
             onChange={handleChange}
-            required
             placeholder="Your email address"
             className="signup_body-textbox"
+            title="Please enter a valid email address."
+            required
           />
           <button type="submit" className="signup_body-button">
             Get Started

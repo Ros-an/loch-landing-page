@@ -44,7 +44,8 @@ export const features = [
         {
             id: 13,
             imgData: Card3,
-        }]
+        },
+    ]
     },
     {
         id: 2,

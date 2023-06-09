@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Logo from "../../assets/Loch.png";
 import "swiper/css";
@@ -13,7 +13,14 @@ import "./styles.scss";
 
 function Testimonial() {
   const width = useWindowWidth();
+  const swiperRef = useRef(null);
 
+  // slides testimonial card on click
+  const handleMoveCard = (index) => {
+    swiperRef?.current?.swiper.slideTo(index);
+  };
+
+  // returns number of card
   const carouselSlideSize = () => {
     if (width > 680 && width < 1024) {
       return 2;
@@ -26,15 +33,19 @@ function Testimonial() {
   return (
     <section className="testimonial">
       <div className="testimonial_header">
-        <h2 className="testimonial_title">Testimonial</h2>
+        <h2 className="testimonial_title">Testimonials</h2>
         <hr />
       </div>
       <div className="testimonial_carousel">
         <img src={Logo} alt="loch-logo" className="testimonial_carousel-logo" />
-        <Swiper spaceBetween={20} slidesPerView={carouselSlideSize()}>
-          {testimonials.map((item) => {
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={carouselSlideSize()}
+          ref={swiperRef}
+        >
+          {testimonials.map((item, index) => {
             return (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide key={item.id} onClick={() => handleMoveCard(index)}>
                 <TestimonialCard
                   name={item.name}
                   designation={item.designation}

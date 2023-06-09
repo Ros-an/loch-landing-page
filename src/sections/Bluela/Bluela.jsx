@@ -1,8 +1,8 @@
 import React from "react";
 import "./styles.scss";
-import Row from "../Row/Row";
+import Row from "../../components/Row/Row";
 import { features } from "../../data";
-import Testimonial from "../Testimonial/Testimonial";
+import Testimonial from "../../components/Testimonial/Testimonial";
 
 function Bluela() {
   return (

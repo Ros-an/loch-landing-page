@@ -1,8 +1,7 @@
+@import '../../index.scss';
+
 .bluela {
     background: radial-gradient(79.84% 79.84% at 32.27% 91.27%, rgba(31, 169, 17, 0.810119) 17.21%, #2F15D0 64.58%, rgba(0, 0, 0, 0) 100%);
-    // min-height: 80vh;
-    // padding: 2rem;
-    // background: #2e15d0b0;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -14,28 +13,34 @@
         gap: 2.5rem;
         width: 100%;
         padding: 0 2rem;
+
+        &_swiperslide {
+            position: relative;
+        }
     }
 
     & .row.reverse {
         flex-direction: row-reverse;
     }
 
-    @media (min-width: 680px) {
+    @media (min-width: $breakpoint-medium) {
         gap: 4.5rem;
 
         & .row {
             flex-direction: row;
             width: 100%;
 
-            & .notification-carousel {
+            &:first-child {
+                padding-right: 0;
+            }
+
+            & .row-visual-part {
                 width: 50%;
             }
         }
     }
 
-    @media (min-width: 1024px) {
-
-        // max-width: 730px;
+    @media (min-width: $breakpoint-large) {
         align-items: flex-end;
 
         & .row {

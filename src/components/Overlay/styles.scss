@@ -1,0 +1,21 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 5;
+
+    &.left {
+        width: 25%;
+        left: -1rem;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 4, 5, 0.76234243697479) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &.right {
+        right: -0.5rem;
+        width: 25%;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.927608543417367) 100%);
+    }
+}

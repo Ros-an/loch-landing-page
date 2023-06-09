@@ -1,7 +1,9 @@
+@import '../../index.scss';
+
 .main {
   background-color: #19191A;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $breakpoint-large) {
     display: flex;
     flex-direction: row;
 
