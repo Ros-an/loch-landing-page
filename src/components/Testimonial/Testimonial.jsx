@@ -10,6 +10,7 @@ import { testimonials } from "../../data";
 import TestimonialCard from "../TestimonialCard/Card";
 import useWindowWidth from "../../customHooks/useWindowWidth";
 import "./styles.scss";
+import { LARGE, MEDIUM } from "../../constants";
 
 function Testimonial() {
   const width = useWindowWidth();
@@ -22,10 +23,10 @@ function Testimonial() {
 
   // returns number of card
   const carouselSlideSize = () => {
-    if (width > 680 && width < 1024) {
+    if (width > MEDIUM && width < LARGE) {
       return 2;
     }
-    if (width > 1024) {
+    if (width > LARGE) {
       return 1.6;
     }
     return 1;

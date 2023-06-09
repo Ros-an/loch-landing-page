@@ -29,17 +29,28 @@
         }
     }
 
+    @media (min-width: $breakpoint-medium) {
+        &_header {
+            padding: 0 3.8rem;
+        }
+
+        &_carousel {
+            padding-left: 3.8rem;
+        }
+    }
+
     @media (min-width: $breakpoint-large) {
         max-width: 800px;
 
         &_header {
-            padding-right: 3.5rem;
+            padding: 0 3.8rem;
         }
 
         &_carousel {
             display: flex;
             gap: 2.5rem;
             align-items: flex-end;
+            overflow-x: hidden;
 
             &-logo {
                 margin-bottom: 0;
